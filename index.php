@@ -1,14 +1,14 @@
 <?php
-    session_start();
+    session_start(); // inicia uma sessão
 
-    include("infra/db/connect.php");
+    include("infra/db/connect.php"); // connecta com o BD
 
-    if($_SERVER['REQUEST_METHOD'] == "POST"){
+    if($_SERVER['REQUEST_METHOD'] == "POST"){ // Verifica se o request_method é do tipo "POST"
 
-        $usuario = $_POST["usuario"];
-        $senha = $_POST["senha"];
+        $usuario = $_POST["usuario"];//guarda o dado inserido pelo usuário no input de name "usuario"
+        $senha = $_POST["senha"];// guarda o dado inserido pelo usuário no input de name "senha"
         
-        $sql = "SELECT * FROM usuarios WHERE usuario = '$usuario' AND senha = '$senha'";
+        $sql = "SELECT * FROM usuarios WHERE usuario = '$usuario' AND senha = '$senha'";// cria uma query que seleciona todos os dados da tabela usuario que são iguais aos que usuario digitou
 
         $resultado = $conn->query($sql);
 
