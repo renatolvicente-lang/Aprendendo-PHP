@@ -10,14 +10,14 @@
         
         $sql = "SELECT * FROM usuarios WHERE usuario = '$usuario' AND senha = '$senha'";// cria uma query que seleciona todos os dados da tabela usuario que são iguais aos que usuario digitou
 
-        $resultado = $conn->query($sql);
+        $resultado = $conn->query($sql);// armazena a variavel $conn que executa a query $sql
 
-        if ($resultado->num_rows > 0){
-            $_SESSION["usuario"] = $usuario;
-            header("Location: public/home.php");
+        if ($resultado->num_rows > 0){// verifica se o numero de linhas da matriz resultado é maior que 0
+            $_SESSION["usuario"] = $usuario;// Nomeia a Sessão
+            header("Location: public/home.php");// manda para a pagina home.php
             exit();
         }else{
-            $erro = "Usuário ou senha inválidos!";
+            $erro = "Usuário ou senha inválidos!";// mensagem caso a operação de erro
         }
     }
 ?>
@@ -39,7 +39,7 @@
         <input type="password" name="senha">
         <br>
         <?php
-        
+            //insere a mensagem de erro na tela
             if(isset($erro)){
                 echo $erro;
             };
