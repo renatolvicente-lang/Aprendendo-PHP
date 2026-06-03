@@ -40,7 +40,7 @@
         <br>
         <?php
             //insere a mensagem de erro na tela
-            if(isset($erro)){
+            if(isset($erro)){// varifica se existe valor na variavel "$erro" 
                 echo $erro;
             };
 
