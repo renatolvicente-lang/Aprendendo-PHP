@@ -6,6 +6,7 @@
         <th>ID</th>
         <th>Usuário</th>
         <th>Senha</th>
+        <th>Excluir</th>
     </tr>
 
     <?php
@@ -22,6 +23,7 @@
                     <td>". $linha['id'] . "</td>
                     <td>". $linha['usuario'] . "</td>
                     <td>". $linha['senha'] . "</td>
+                    <td> <a href='excluir.php?id=". $linha['id'] ."'> Excluir </td>
                 </tr>
         ";// adiciona os dados captados da tabela do bd no html
 
