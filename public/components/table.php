@@ -23,8 +23,9 @@
                     <td>". $linha['id'] . "</td>
                     <td>". $linha['usuario'] . "</td>
                     <td>". $linha['senha'] . "</td>
-                    <td> <a href='excluir.php?id=". $linha['id'] ."'> Excluir </td>
+                    <td> <a class'excluir-usuario' href='excluir.php?id=". $linha['id'] ."'> Excluir </td>
                 </tr>
+                <script src='../scripts/table.js'></script>
         ";// adiciona os dados captados da tabela do bd no html
 
     }
